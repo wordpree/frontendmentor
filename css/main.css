@@ -1,0 +1,193 @@
+*,
+::after,
+::before {
+  box-sizing: border-box; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  background-color: #f5f3f7; }
+
+p {
+  color: #a39daa; }
+
+.wrapper {
+  margin-top: 4.0625rem;
+  margin-bottom: 2rem;
+  position: relative; }
+  .wrapper::before {
+    height: 100%;
+    width: 50%;
+    background: linear-gradient(to bottom, #e942ff, #8838ff);
+    top: -4.0625rem;
+    left: 0;
+    right: 0;
+    display: block;
+    content: "";
+    position: absolute;
+    border-radius: 0 0 100% 0; }
+
+.phone {
+  max-width: 20.625rem;
+  width: 70%;
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.15);
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  background-color: white;
+  border-radius: 18px;
+  padding: 0.75rem; }
+  .phone .phone-inner {
+    background-color: #f5f3f7;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column; }
+
+.header {
+  min-height: 4.25rem;
+  border-radius: 18px 18px 9px 9px;
+  background: linear-gradient(to right, #8838ff, #e942ff);
+  display: flex;
+  align-items: center;
+  position: relative; }
+  .header > div:not(:first-child) {
+    margin-top: 1.25rem; }
+  .header .shape {
+    height: 1.25rem;
+    width: 8.125rem;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 0;
+    background: white;
+    border-radius: 0 0 30px 30px; }
+  .header .avatar {
+    display: flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem; }
+    .header .avatar::before {
+      content: "\003C";
+      display: flex;
+      font-size: 1.5rem;
+      color: white;
+      padding-right: 0.5rem; }
+  .header img {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-right: 0.5rem; }
+  .header .title h1 {
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5; }
+  .header .title p {
+    color: #d89eff;
+    font-size: 0.625rem;
+    font-weight: 400; }
+  .header .more-icon {
+    margin-left: auto;
+    margin-right: 1rem; }
+  .header .icon {
+    background: white;
+    height: 2px;
+    width: 2px; }
+    .header .icon:not(:last-child) {
+      margin-bottom: 1px; }
+
+.content {
+  margin-top: 1rem;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem; }
+  .content::after {
+    display: table;
+    content: "";
+    clear: both;
+    visibility: hidden;
+    height: 0; }
+  .content .item {
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.14);
+    padding: 0.5rem;
+    margin-bottom: 0.75rem;
+    border-radius: 14px;
+    font-size: 0.725rem;
+    max-width: 24ch; }
+  .content .left {
+    color: #9241c8;
+    background: rgba(216, 158, 255, 0.03);
+    border-bottom-left-radius: 6px;
+    float: left; }
+  .content .right {
+    color: #6e5d7e;
+    background: white;
+    border-bottom-right-radius: 6px;
+    float: right;
+    display: flex; }
+    .content .right img {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 12px;
+      margin-right: 0.625rem; }
+  .content .image {
+    background-color: initial;
+    box-shadow: none;
+    padding: 0;
+    max-width: 11.5625rem; }
+  .content .pay {
+    min-width: 10.125rem;
+    display: flex;
+    background: linear-gradient(to right, #e942ff, #8838ff);
+    color: white;
+    justify-content: space-between; }
+
+.phone-inner .input {
+  display: flex;
+  height: 2.215rem;
+  width: 13.25rem;
+  margin: 0 auto;
+  margin-top: 1rem;
+  background: white;
+  border-radius: 16px;
+  margin-bottom: 0.875rem;
+  font-size: 0.625rem;
+  align-items: center;
+  color: #c6cacd;
+  position: relative; }
+  .phone-inner .input span {
+    margin-left: 1.25rem; }
+  .phone-inner .input .icon-submit {
+    width: 1.5rem;
+    height: 1.5rem;
+    background: #3e2753;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: 0.5rem;
+    position: relative; }
+    .phone-inner .input .icon-submit::after {
+      display: inline;
+      content: "\003E";
+      position: absolute;
+      font-size: 1.5rem;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      color: white; }
+
+.article {
+  margin-top: 4.5rem;
+  text-align: center; }
+  .article h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #3e2753;
+    line-height: 2.5; }
+  .article p {
+    padding: 2.125em;
+    line-height: 1.8;
+    max-width: 25em;
+    margin: 0 auto; }

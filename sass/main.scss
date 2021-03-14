@@ -1,0 +1,223 @@
+@import "./base/reset";
+@import "./abstract/_mixins.scss";
+
+.wrapper {
+  margin-top: 4.0625rem;
+  margin-bottom: 2rem;
+  position: relative;
+  &::before {
+    @include pseudo(
+      linear-gradient(to bottom, $light-magenta, $light-violet),
+      $width: 50%,
+      $top: -4.0625rem
+    );
+    border-radius: 0 0 100% 0;
+  }
+}
+.phone {
+  max-width: 20.625rem;
+  width: 70%;
+  // min-height: 31.875rem;
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.15);
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  background-color: $white;
+  border-radius: 18px;
+  padding: 0.75rem;
+  .phone-inner {
+    background-color: $light-grayish-violet;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+//header
+.header {
+  min-height: 4.25rem;
+  border-radius: 18px 18px 9px 9px;
+  background: linear-gradient(
+    to right,
+    hsl(264, 100%, 61%),
+    hsl(293, 100%, 63%)
+  );
+  display: flex;
+  align-items: center;
+  position: relative;
+  & > div:not(:first-child) {
+    margin-top: 1.25rem;
+  }
+  .shape {
+    height: 1.25rem;
+    width: 8.125rem;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 0;
+    background: $white;
+    border-radius: 0 0 30px 30px;
+  }
+
+  .avatar {
+    display: flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    &::before {
+      content: "\003C";
+      display: flex;
+      font-size: 1.5rem;
+      color: $white;
+      padding-right: 0.5rem;
+    }
+  }
+
+  img {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    border: 2px solid $white;
+    margin-right: 0.5rem;
+  }
+
+  .title h1 {
+    color: $white;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  .title p {
+    color: $pale-violet;
+    font-size: 0.625rem;
+    font-weight: 400;
+  }
+  .more-icon {
+    margin-left: auto;
+    margin-right: 1rem;
+  }
+  .icon {
+    background: $white;
+    height: 2px;
+    width: 2px;
+    &:not(:last-child) {
+      margin-bottom: 1px;
+    }
+  }
+}
+
+//chat content
+.content {
+  margin-top: 1rem;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  @include clearfix;
+
+  .item {
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.14);
+    padding: 0.5rem;
+    margin-bottom: 0.75rem;
+    border-radius: 14px;
+    font-size: 0.725rem;
+    max-width: 24ch;
+  }
+
+  .left {
+    color: $moderate-violet;
+    background: rgba($pale-violet, 0.03);
+    border-bottom-left-radius: 6px;
+    float: left;
+  }
+
+  .right {
+    color: $dark-violet;
+    background: $white;
+    border-bottom-right-radius: 6px;
+    float: right;
+    display: flex;
+    img {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 12px;
+      margin-right: 0.625rem;
+    }
+  }
+  .image {
+    background-color: initial;
+    box-shadow: none;
+    padding: 0;
+    max-width: 11.5625rem;
+  }
+
+  .pay {
+    min-width: 10.125rem;
+    display: flex;
+    background: linear-gradient(
+      to right,
+      hsl(293, 100%, 63%),
+      hsl(264, 100%, 61%)
+    );
+    color: $white;
+    justify-content: space-between;
+  }
+}
+
+//send
+.phone-inner {
+  .input {
+    display: flex;
+    height: 2.215rem;
+    width: 13.25rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+    background: $white;
+    border-radius: 16px;
+    margin-bottom: 0.875rem;
+    font-size: 0.625rem;
+    align-items: center;
+    color: $grayish-blue;
+    position: relative;
+    span {
+      margin-left: 1.25rem;
+    }
+    .icon-submit {
+      width: 1.5rem;
+      height: 1.5rem;
+      background: $very-dark-violet;
+      border-radius: 50%;
+      margin-left: auto;
+      margin-right: 0.5rem;
+      position: relative;
+
+      &::after {
+        display: inline;
+        content: "\003E";
+        position: absolute;
+        font-size: 1.5rem;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        color: $white;
+      }
+    }
+  }
+}
+
+//article
+
+.article {
+  margin-top: 4.5rem;
+  text-align: center;
+
+  h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: $very-dark-violet;
+    line-height: 2.5;
+  }
+  p {
+    padding: 2.125em;
+    line-height: 1.8;
+    max-width: 25em;
+    margin: 0 auto;
+  }
+}
