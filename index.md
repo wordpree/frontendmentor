@@ -1,37 +1,105 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-You can use the [editor on GitHub](https://github.com/wordpree/frontendmentor/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/wordpree/frontendmentor/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | [Challenge Name Here]</title>
+  </head>
+  <body>
+    <main class="main">
+      <section class="section">
+        <div class="color-mark"></div>
+        <div class="phone">
+          <div class="phone-inner">
+            <header class="header">
+              <div class="shape"></div>
+              <div class="avatar">
+                <img src="images/avatar.jpg" alt="avatar" />
+                <div class="title">
+                  <h1>Samuel Green</h1>
+                  <p>Available to Walk</p>
+                </div>
+              </div>
+              <div class="more-icon">
+                <div class="icon"></div>
+                <div class="icon"></div>
+                <div class="icon"></div>
+              </div>
+            </header>
+            <div class="content clear-fix">
+              <div class="item left">
+                That sounds great.I’d be happy with that.
+              </div>
+              <div class="clear-fix"></div>
+              <div class="item left">
+                Could you send over some pictures of your dog, please?
+              </div>
+              <div class="clear-fix"></div>
+              <div class="item right image">
+                <img src="images/dog-image-1.jpg" alt="happy dog" />
+                <img src="images/dog-image-2.jpg" alt="sitting dog" />
+                <img src="images/dog-image-3.jpg" alt="playing dog" />
+              </div>
+              <div class="clear-fix"></div>
+              <div class="item right">
+                Here are a few pictures. She’s a happy girl!
+              </div>
+              <div class="clear-fix"></div>
+              <div class="item right">Can you make it?</div>
+              <div class="clear-fix"></div>
+              <div class="item left">
+                She looks so happy! The time we discussed works. How long shall
+                I take her out for?
+              </div>
+              <div class="clear-fix"></div>
+              <div class="item left pay">
+                <span>30 minute walk</span>
+                <span>$29</span>
+              </div>
+              <div class="clear-fix"></div>
+              <div class="item left pay">
+                <span>1 hour walk </span>
+                <span>$49</span>
+              </div>
+              <div class="clear-fix"></div>
+            </div>
+            <div class="input">
+              <span>Type a message…</span>
+              <span class="icon-submit"></span>
+            </div>
+          </div>
+        </div>
+        <article class="article">
+          <h1>Simple booking</h1>
+          <p>
+            Stay in touch with our dog walkers through the chat interface. This
+            makes it easy to discuss arrangements and make bookings. Once the
+            walk has been completed you can rate your walker and book again all
+            through the chat.
+          </p>
+        </article>
+        <div class="bg-mark"></div>
+      </section>
+    </main>
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Hai</a>.
+    </div> -->
+  </body>
+</html>
