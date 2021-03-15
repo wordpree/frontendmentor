@@ -15,32 +15,53 @@ body {
 p {
   color: #a39daa; }
 
-.wrapper {
-  margin-top: 4.0625rem;
-  margin-bottom: 2rem;
-  position: relative; }
-  .wrapper::before {
-    height: 100%;
-    width: 50%;
-    background: linear-gradient(to bottom, #e942ff, #8838ff);
-    top: -4.0625rem;
-    left: 0;
-    right: 0;
-    display: block;
-    content: "";
-    position: absolute;
-    border-radius: 0 0 100% 0; }
+.clear-fix::after {
+  display: table;
+  content: "";
+  clear: both;
+  visibility: hidden;
+  height: 0; }
+
+@media only screen and (min-width: 1440px) {
+  .main {
+    max-width: calc(90em + 1px);
+    margin-left: auto;
+    margin-right: auto; } }
+
+.section {
+  position: relative;
+  height: 100vh; }
+  @media only screen and (min-width: 1440px) {
+    .section {
+      display: flex; } }
+
+.color-mark {
+  width: 50%;
+  height: 31.25em;
+  background: linear-gradient(to bottom, #e942ff, #8838ff);
+  border-radius: 0 0 100% 0; }
+  @media only screen and (min-width: 1440px) {
+    .color-mark {
+      width: 26.25em;
+      border-radius: 0 0 50% 0;
+      height: 85vh;
+      border-radius: 0 0 70% 25%; } }
 
 .phone {
-  max-width: 20.625rem;
-  width: 70%;
+  min-width: 15.75em;
   box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.15);
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 4em);
+  position: absolute;
   background-color: white;
   border-radius: 18px;
   padding: 0.75rem; }
+  @media only screen and (min-width: 1440px) {
+    .phone {
+      left: 0;
+      top: 50%;
+      transform: translate(22.4375em, -50%); } }
   .phone .phone-inner {
     background-color: #f5f3f7;
     border-radius: 18px;
@@ -65,6 +86,9 @@ p {
     top: 0;
     background: white;
     border-radius: 0 0 30px 30px; }
+    @media only screen and (min-width: 1440px) {
+      .header .shape {
+        height: 1.5rem; } }
   .header .avatar {
     display: flex;
     align-items: center;
@@ -99,6 +123,9 @@ p {
     width: 2px; }
     .header .icon:not(:last-child) {
       margin-bottom: 1px; }
+  @media only screen and (min-width: 1440px) {
+    .header {
+      min-height: 5.5rem; } }
 
 .content {
   margin-top: 1rem;
@@ -148,7 +175,7 @@ p {
 .phone-inner .input {
   display: flex;
   height: 2.215rem;
-  width: 13.25rem;
+  width: 95%;
   margin: 0 auto;
   margin-top: 1rem;
   background: white;
@@ -179,15 +206,32 @@ p {
       color: white; }
 
 .article {
-  margin-top: 4.5rem;
+  margin-top: 12.5em;
   text-align: center; }
   .article h1 {
     font-size: 2.25rem;
     font-weight: 700;
     color: #3e2753;
-    line-height: 2.5; }
+    line-height: 2.6; }
   .article p {
     padding: 2.125em;
+    padding-top: 0;
     line-height: 1.8;
     max-width: 25em;
     margin: 0 auto; }
+  @media only screen and (min-width: 1440px) {
+    .article {
+      margin: 0;
+      margin-left: 23.625em;
+      align-self: center;
+      text-align: left; }
+      .article p {
+        max-width: 52ch;
+        padding-left: 0; } }
+
+.attribution {
+  font-size: 11px;
+  text-align: center; }
+
+.attribution a {
+  color: #3e52a3; }

@@ -1,30 +1,59 @@
 @import "./base/reset";
 @import "./abstract/_mixins.scss";
+@import "./abstract/mixins";
 
-.wrapper {
-  margin-top: 4.0625rem;
-  margin-bottom: 2rem;
-  position: relative;
-  &::before {
-    @include pseudo(
-      linear-gradient(to bottom, $light-magenta, $light-violet),
-      $width: 50%,
-      $top: -4.0625rem
-    );
-    border-radius: 0 0 100% 0;
+.clear-fix {
+  @include clearfix();
+}
+
+//non-mobile
+.main {
+  @include query("desktop") {
+    max-width: calc(90em + 1px);
+    margin-left: auto;
+    margin-right: auto;
   }
 }
-.phone {
-  max-width: 20.625rem;
-  width: 70%;
-  // min-height: 31.875rem;
-  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.15);
-  margin-left: auto;
-  margin-right: auto;
+
+.section {
   position: relative;
+  height: 100vh;
+  @include query("desktop") {
+    display: flex;
+  }
+}
+
+//mobile first
+
+.color-mark {
+  width: 50%;
+  height: 31.25em;
+  background: linear-gradient(to bottom, $light-magenta, $light-violet);
+  border-radius: 0 0 100% 0;
+  @include query("desktop") {
+    width: 26.25em;
+    border-radius: 0 0 50% 0;
+    height: 85vh;
+    border-radius: 0 0 70% 25%;
+  }
+}
+
+.phone {
+  min-width: 15.75em;
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.15);
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 4em);
+  position: absolute;
   background-color: $white;
   border-radius: 18px;
   padding: 0.75rem;
+  @include query("desktop") {
+    left: 0;
+    top: 50%;
+    transform: translate(22.4375em, -50%);
+  }
+
   .phone-inner {
     background-color: $light-grayish-violet;
     border-radius: 18px;
@@ -57,6 +86,9 @@
     top: 0;
     background: $white;
     border-radius: 0 0 30px 30px;
+    @include query("desktop") {
+      height: 1.5rem;
+    }
   }
 
   .avatar {
@@ -102,6 +134,9 @@
     &:not(:last-child) {
       margin-bottom: 1px;
     }
+  }
+  @include query("desktop") {
+    min-height: 5.5rem;
   }
 }
 
@@ -166,7 +201,7 @@
   .input {
     display: flex;
     height: 2.215rem;
-    width: 13.25rem;
+    width: 95%;
     margin: 0 auto;
     margin-top: 1rem;
     background: $white;
@@ -205,19 +240,40 @@
 //article
 
 .article {
-  margin-top: 4.5rem;
+  margin-top: 12.5em;
   text-align: center;
 
   h1 {
     font-size: 2.25rem;
     font-weight: 700;
     color: $very-dark-violet;
-    line-height: 2.5;
+    line-height: 2.6;
   }
   p {
     padding: 2.125em;
+    padding-top: 0;
     line-height: 1.8;
     max-width: 25em;
     margin: 0 auto;
   }
+  @include query("desktop") {
+    margin: 0;
+    margin-left: 23.625em;
+    align-self: center;
+    text-align: left;
+    p {
+      max-width: 52ch;
+      padding-left: 0;
+    }
+  }
+}
+
+//attribute
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
