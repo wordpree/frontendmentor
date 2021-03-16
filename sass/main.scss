@@ -23,6 +23,18 @@
   }
 }
 
+.bg-mark {
+  @include query("desktop") {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($pale-violet, 0.1);
+    width: 20.3125em;
+    border-top-left-radius: 100% 50%;
+    height: 75vh;
+  }
+}
+
 //mobile first
 
 .color-mark {
@@ -32,9 +44,9 @@
   border-radius: 0 0 100% 0;
   @include query("desktop") {
     width: 26.25em;
-    border-radius: 0 0 50% 0;
     height: 85vh;
-    border-radius: 0 0 70% 25%;
+    border-bottom-right-radius: 100% 100%;
+    border-bottom-left-radius: 70% 29%;
   }
 }
 

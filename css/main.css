@@ -35,6 +35,16 @@ p {
     .section {
       display: flex; } }
 
+@media only screen and (min-width: 1440px) {
+  .bg-mark {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(216, 158, 255, 0.1);
+    width: 20.3125em;
+    border-top-left-radius: 100% 50%;
+    height: 75vh; } }
+
 .color-mark {
   width: 50%;
   height: 31.25em;
@@ -43,9 +53,9 @@ p {
   @media only screen and (min-width: 1440px) {
     .color-mark {
       width: 26.25em;
-      border-radius: 0 0 50% 0;
       height: 85vh;
-      border-radius: 0 0 70% 25%; } }
+      border-bottom-right-radius: 100% 100%;
+      border-bottom-left-radius: 70% 29%; } }
 
 .phone {
   min-width: 15.75em;
